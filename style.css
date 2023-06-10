@@ -1,0 +1,325 @@
+/* Thin 100 Italic
+Regular 400
+Bold 700 */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(2, 135, 255);
+    font-family: 'Roboto', sans-serif;
+    margin: 0 5vw;
+    color: white;
+}
+
+header {
+    width: 60vw;
+    height: 40vh;
+    margin: 2vh 15vw;
+    z-index: -1;
+}
+
+header div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #052c69;
+    height: 50%;
+    transform: rotate(358deg);
+    z-index: -1;
+    opacity: 0;
+    animation: fade 2s ease-in-out forwards;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(30vh);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0358deg);
+    }
+}
+
+header div p {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: rotate(358deg);
+    align-self: center;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 0;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    margin-top: -2rem;
+    z-index: 1;
+}
+
+.introduction {
+    display: flex;
+}
+
+.introduction div {
+    width: 50%;
+    padding: 1rem;
+    text-align: justify;
+
+}
+
+.introduction__orign {
+    line-height: 1.5rem;
+}
+
+.introduction__name {
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+.facts {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.facts__about {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #052c69;
+    height: 3rem;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 1;
+}
+
+.facts__about p {
+    align-self: center;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.facts__lang {
+    background-color: #fff2e7;
+    display: flex;
+    justify-content: center;
+    height: 7rem;
+    color: #052c69;
+    margin-top: -1rem;
+
+}
+
+.facts__lang p {
+    align-self: center;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    gap: 4rem;
+    width: 90vw;
+    height: 90vh;
+    grid-template-columns: 47% 47%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 3rem;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.date__size-title {
+    grid-column: 1/1;
+    grid-row: 1/1;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: #052c69;
+    width: 50%;
+    text-align: center;
+    margin-left: 2rem;
+    padding: .5rem;
+    position: relative;
+    z-index: 1;
+    transform: rotate(359deg);
+}
+
+.date__size {
+    grid-column: 1/1;
+    grid-row: 2/5;
+    padding: 10%;
+    text-align: justify;
+    background-color: #fff2e7;
+    color: #052c69;
+    margin-top: -5rem;
+    background-image: url(./img/rule.png);
+    background-repeat: no-repeat;
+    background-position: right 100%;
+    background-size: 20%;
+}
+
+.date__population-title {
+    grid-column: 2/3;
+    grid-row: 2/2;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: #052c69;
+    width: 50%;
+    text-align: center;
+    margin-left: 2rem;
+    padding: .5rem;
+    position: relative;
+    z-index: 1;
+    transform: rotate(359deg);
+}
+
+.date__population {
+    grid-column: 2/3;
+    grid-row: 3/5;
+    padding: 10%;
+    padding-right: 20%;
+    text-align: justify;
+    background-color: #fff2e7;
+    color: #052c69;
+    margin-top: -5rem;
+    background-image: url(./img/crowed.png);
+    background-repeat: no-repeat;
+    background-position: right 100%;
+    background-size: 20%;
+}
+
+.date__lang-title {
+    grid-column: 1/1;
+    grid-row: 5/5;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: #052c69;
+    width: 50%;
+    text-align: center;
+    margin-left: 2rem;
+    padding: .5rem;
+    position: relative;
+    z-index: 1;
+    transform: rotate(359deg);
+}
+
+.date__lang {
+    grid-column: 1/1;
+    grid-row: 6/9;
+    padding: 5% 20% 0% 5%;
+    text-align: justify;
+    background-color: #fff2e7;
+    color: #052c69;
+    margin-top: -5rem;
+    background-image: url(./img/spoken.png);
+    background-repeat: no-repeat;
+    background-position: right 100%;
+    background-size: 20%;
+}
+
+.date__rio-title {
+    grid-column: 2/3;
+    grid-row: 5/5;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: #052c69;
+    width: 50%;
+    text-align: center;
+    margin-left: 2rem;
+    padding: .5rem;
+    position: relative;
+    z-index: 1;
+    transform: rotate(359deg);
+}
+
+.date__rio {
+    grid-column: 2/3;
+    grid-row: 6/8;
+    padding: 10%;
+    padding-right: 20%;
+    text-align: justify;
+    background-color: #fff2e7;
+    color: #052c69;
+    margin-top: -5rem;
+    background-image: url(./img/cristo-redentor.svg);
+    background-repeat: no-repeat;
+    background-position: right 120%;
+    background-size: 20%;
+}
+
+footer {
+    margin: 15vh 0vw 0vh -7vw;
+    background-color: #052c69;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+}
+
+footer p {
+    font-size: 1rem;
+    color: white;
+}
+
+footer p a {
+    color: white;
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        display: inline-block;
+        margin-bottom: 5rem;
+    }
+
+    .date__size, .date__lang, .date__rio, .date__population {
+        margin-top: 0rem;
+        background-image: none;
+        padding: 10%;
+    }
+
+    .date__size-title, .date__lang-title, .date__rio-title, .date__population-title {
+        margin-top: 1rem;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+
+    .date__rio {
+
+        margin-bottom: 10rem;
+    }
+
+    footer {
+        display: none;
+
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .introduction {
+        margin-top: -5rem;
+        display: inline-block;
+    }
+
+    .introduction div {
+        width: 100%;
+    }
+
+}
