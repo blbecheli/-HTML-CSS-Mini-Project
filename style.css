@@ -13,6 +13,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0 5vw;
     color: white;
+    box-sizing: border-box;
 }
 
 header {
@@ -22,7 +23,7 @@ header {
     z-index: -1;
 }
 
-header div {
+.header__fact{
     position: relative;
     display: flex;
     justify-content: center;
@@ -45,6 +46,7 @@ header div {
         transform: translateY(0358deg);
     }
 }
+
 
 header div p {
     text-align: center;
@@ -77,6 +79,11 @@ header h1 {
     padding: 1rem;
     text-align: justify;
 
+}
+
+.introduction div img {
+    width: 20%;
+    height: auto;
 }
 
 .introduction__orign {
@@ -129,14 +136,11 @@ header h1 {
 
 .container {
     display: grid;
-    gap: 4rem;
     width: 90vw;
     height: 90vh;
-    grid-template-columns: 47% 47%;
+    grid-template-columns: 47% 3% 3% 47%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     margin-top: 3rem;
-    border-left: 1px solid white;
-    border-bottom: 1px solid white;
 }
 
 .date__size-title {
@@ -155,28 +159,44 @@ header h1 {
     transform: rotate(359deg);
 }
 
+
 .date__size {
     grid-column: 1/1;
     grid-row: 2/5;
-    padding: 10%;
+    margin-left: 5rem;
+    padding: 6% 15% 1% 10%;
+    display: flex;
     text-align: justify;
     background-color: #fff2e7;
     color: #052c69;
-    margin-top: -5rem;
+    margin-top: -1rem;
     background-image: url(./img/rule.png);
     background-repeat: no-repeat;
     background-position: right 100%;
     background-size: 20%;
+    z-index: -1;
 }
 
+.date__size::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    background-image: url(./img/number1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -13%;
+}
+
+
 .date__population-title {
-    grid-column: 2/3;
+    grid-column: 4/5;
     grid-row: 2/2;
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: bolder;
     background-color: #052c69;
-    width: 50%;
+    width: 80%;
     text-align: center;
     margin-left: 2rem;
     padding: .5rem;
@@ -186,23 +206,35 @@ header h1 {
 }
 
 .date__population {
-    grid-column: 2/3;
+    grid-column: 4/4;
     grid-row: 3/5;
-    padding: 10%;
+    padding: 6% 15% 1% 20%;
     padding-right: 20%;
     text-align: justify;
     background-color: #fff2e7;
     color: #052c69;
-    margin-top: -5rem;
+    margin-top: -1rem;
     background-image: url(./img/crowed.png);
     background-repeat: no-repeat;
     background-position: right 100%;
     background-size: 20%;
 }
 
+.date__population::before {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background-image: url(./img/number2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -16%;
+}
+
+
 .date__lang-title {
     grid-column: 1/1;
-    grid-row: 5/5;
+    grid-row: 6/6;
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: bolder;
@@ -218,21 +250,32 @@ header h1 {
 
 .date__lang {
     grid-column: 1/1;
-    grid-row: 6/9;
-    padding: 5% 20% 0% 5%;
+    grid-row: 7/10;
+    padding: 4% 5% 0% 20%;
     text-align: justify;
     background-color: #fff2e7;
     color: #052c69;
-    margin-top: -5rem;
     background-image: url(./img/spoken.png);
     background-repeat: no-repeat;
     background-position: right 100%;
     background-size: 20%;
 }
 
+.date__lang::before {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    margin-top:0;
+    background-image: url(./img/number3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -15%;
+}
+
 .date__rio-title {
-    grid-column: 2/3;
-    grid-row: 5/5;
+    grid-column: 4/4;
+    grid-row: 6/6;
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: bolder;
@@ -246,19 +289,65 @@ header h1 {
     transform: rotate(359deg);
 }
 
+
 .date__rio {
-    grid-column: 2/3;
-    grid-row: 6/8;
-    padding: 10%;
-    padding-right: 20%;
+    grid-column: 4/4;
+    grid-row: 7/9;
+    padding: 4% 20% 0% 20%;
     text-align: justify;
     background-color: #fff2e7;
     color: #052c69;
-    margin-top: -5rem;
+    /* margin-top: 1rem; */
     background-image: url(./img/cristo-redentor.svg);
     background-repeat: no-repeat;
     background-position: right 120%;
     background-size: 20%;
+}
+
+.date__rio::before {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    /* margin-top:1%; */
+    background-image: url(./img/number4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -15%;
+}
+
+.sep {
+    position: relative;
+    grid-row: 1/10;
+    grid-column: 3/4;    
+    border-left: 3px solid white;    
+}
+
+
+
+.sep__population {
+    grid-row: 2/2;
+    grid-column: 3/4;
+    border-top: 1px solid white;
+}
+
+.sep__size {
+    grid-row: 1/1;
+    grid-column: 2/3;
+    border-top: 1px solid white;
+}
+
+.sep__lang {
+    grid-row: 6/6;
+    grid-column: 2/3;
+    border-top: 1px solid white; 
+    
+}
+
+.sep__rio {
+    grid-row: 6/6;
+    grid-column: 3/4;
+    border-top: 1px solid white;
 }
 
 footer {
@@ -279,47 +368,3 @@ footer p a {
     color: white;
 }
 
-@media screen and (max-width: 640px) {
-    .container {
-        display: inline-block;
-        margin-bottom: 5rem;
-    }
-
-    .date__size, .date__lang, .date__rio, .date__population {
-        margin-top: 0rem;
-        background-image: none;
-        padding: 10%;
-    }
-
-    .date__size-title, .date__lang-title, .date__rio-title, .date__population-title {
-        margin-top: 1rem;
-        width: 60%;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-
-
-    .date__rio {
-
-        margin-bottom: 10rem;
-    }
-
-    footer {
-        display: none;
-
-    }
-
-    header h1 {
-        font-size: 3rem;
-    }
-
-    .introduction {
-        margin-top: -5rem;
-        display: inline-block;
-    }
-
-    .introduction div {
-        width: 100%;
-    }
-
-}

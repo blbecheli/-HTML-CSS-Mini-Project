@@ -1,0 +1,48 @@
+@media screen and (max-width: 640px) {
+    .container {
+        display: inline-block;
+        margin-bottom: 5rem;
+    }
+
+    .date__size, .date__lang, .date__rio, .date__population {
+        margin-top: 0rem;
+        background-image: none;
+        padding: 10%;
+    }
+
+    .date__size-title, .date__lang-title, .date__rio-title, .date__population-title {
+        margin-top: 1rem;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .date__size::before, .date__lang::before, .date__rio::before, .date__population::before {
+        display: none;
+    }
+
+
+    .date__rio {
+
+        margin-bottom: 10rem;
+    }
+
+    footer {
+        display: none;
+
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .introduction {
+        margin-top: -5rem;
+        display: inline-block;
+    }
+
+    .introduction div {
+        width: 100%;
+    }
+
+}
